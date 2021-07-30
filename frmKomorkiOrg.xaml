@@ -15,7 +15,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Label Content="Filtruj komórki" Grid.Row="0" Grid.Column="0" Margin="5,5,332,218"/>
-        <TextBox Name="txtFilter" Grid.Row="0" Margin="145,5,5,215" Text ="Ala ma kota" TextChanged="txtFilter_TextChanged" Grid.ColumnSpan="2"/>
+        <TextBox Name="txtFilter" Grid.Row="0" Margin="145,5,5,215" Text ="Ala ma kota" Grid.ColumnSpan="2"/>
         <ListView x:Name="lstKomorkiOrg" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" SelectionChanged="lstKomorkiOrg_SelectionChanged" Margin="0,48,0,34">
             <ListView.View>
                 <GridView>
@@ -23,11 +23,8 @@
                     <GridViewColumn Header="Symbol"  Width="60" DisplayMemberBinding="{Binding Symbol}"/>
                     <GridViewColumn Header="Nazwa"  Width="128" DisplayMemberBinding="{Binding Nazwa }"  />
                     <GridViewColumn Header="Opis"  Width="256" DisplayMemberBinding="{Binding Opis}" />
-
-
                 </GridView>
             </ListView.View>
-
         </ListView>
         <Button x:Name="btnDodaj" Content="Dodaj" HorizontalAlignment="Left" Margin="32,224,0,0" VerticalAlignment="Top" Height="20" Width="80"/>
         <Button x:Name="btnUsun" Content="Usun" HorizontalAlignment="Left" Margin="203,223,0,0" VerticalAlignment="Top" Height="20" Width="80"/>

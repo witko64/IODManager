@@ -15,7 +15,7 @@ namespace IODManager
         public string NIP { get; set; }
         public string REGON { get; set; }
         public string Opis { get; set; }
-        private bool IsNew { get; set; }
+        public bool IsNew { get; set; }
 
         public ADO(string nazwa, string kod, string miejsc, string adres, string nr, string pesel, string nip, string reg, string ops)
         {
