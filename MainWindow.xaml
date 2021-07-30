@@ -1,0 +1,36 @@
+﻿<Window x:Class="IODManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IODManager"
+        mc:Ignorable="d"
+        Title="IOD Manager" Height="450" Width="800">
+    <DockPanel DockPanel.Dock ="Top">
+        <Menu>
+            <MenuItem Header = "_Operacje">
+                <MenuItem Header="_Pracownicy" />
+                <MenuItem Header="_Zbiory danych" />
+                <MenuItem Header="_Procesy,czynności" />
+                <MenuItem Header="_Uprawnienia" />
+                <Separator />
+                <MenuItem Header="_Logout" Click="MenuItem_Logout" />
+            </MenuItem>
+            <MenuItem Header="_Raporty">
+                <MenuItem Header="Drukuj upoważenienie" />
+                <MenuItem Header="Zestawienia" />
+            </MenuItem>
+            <MenuItem Header = "_Konfiguracja" >
+                <MenuItem Header="_Administrator, dane adresowe" Click="MenuItem_FrmDaneADO"/>
+                <MenuItem Header="_Komórki organizacyjne" Click="MenuItem_FrmKomórkiOrg"/>
+                <MenuItem Header="_Zakres urawnień/upoważnień" />
+                <MenuItem Header="_Systemy Informatyczne" />
+                <MenuItem Header="_Opcje" />
+                <Separator />
+                <MenuItem Header="_Exit" Click="MenuItem_Logout" />
+            </MenuItem>
+            <MenuItem Header="_Pomoc" Click="MenuItem_Pomoc" />
+            <MenuItem Header="_Exit" Click="MenuItem_Logout" />
+        </Menu>
+    </DockPanel>
+</Window>

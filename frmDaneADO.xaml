@@ -1,0 +1,47 @@
+﻿<Window x:Name="frmDaneADO" x:Class="IODManager.FrmDaneADO"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IODManager"
+        mc:Ignorable="d"
+        Title="Administrator Danych" Height="450" Width="800">
+    <Grid Margin="10,10,10,10" HorizontalAlignment="Left" VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lbNazwa" Content="Nazwa" Grid.Row="0" Grid.Column="0" Margin="5"  />
+        <TextBox x:Name="txtNazwaADO"  Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding Nazwa}" />
+        <Label x:Name="lbNazwaKod" Content="Kod pocztowy" Grid.Row="1" Grid.Column="0" Margin="5" />
+        <TextBox x:Name="txtKodPocztowy" Grid.Row="1" Grid.Column="1" Text = "{Binding KodPocztowy}" />
+        <Label x:Name="lbMiejscowosc" Content="Miejscowość" Grid.Row="1" Grid.Column="2" Margin="5"/>
+        <TextBox x:Name="txtMiejscowosc" Grid.Row="1" Grid.Column="3"  Text="{Binding Miejscowosc}"/>
+        <Label x:Name="lbAdres" Content="Adres" Grid.Row="2" Grid.Column="0" Margin="5" />
+        <TextBox x:Name="txtAdres" Grid.Row="2" Grid.Column="1"   Text="{Binding Adres}"/>
+        <Label x:Name="lbNumerDomuMieszkania" Content="Numer" Grid.Row="2" Grid.Column="2" Margin="5"/>
+        <TextBox x:Name="txtNumer" Grid.Row="2" Grid.Column="3" Text="{Binding Numer}"/>
+        <Label x:Name="lbNIP" Content="NIP" Grid.Row="3" Grid.Column="0" Margin="5" />
+        <TextBox x:Name="txtNIP" Grid.Row="3" Grid.Column="1" Text="{Binding NIP}"/>
+        <Label x:Name="lbREGON" Content="REGON" Grid.Row="3" Grid.Column="2" Margin="5"/>
+        <TextBox x:Name="txtREGON" Grid.Row="3" Grid.Column="3" Text="{Binding REGON}"/>
+        <Label x:Name="lbOpis" Content="Opis -uwagi " Grid.Row="4" Grid.Column="0" Margin="5" IsEnabled="False"/>
+        <TextBox x:Name="txtUwagi" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding Opis}"/>
+        <Button Content="Anuluj"  Grid.Row="8" Grid.Column="0"  Margin ="25,5,25,5" HorizontalAlignment="Center" Grid.ColumnSpan="2" Width="156"/>
+        <Button Content="(Zapisz) OK"  Grid.Row="8" Grid.Column="2" HorizontalAlignment="Center"  Margin ="25,5,25,5" Grid.ColumnSpan="2" Width="156" Click="btnClick_Save_Data"/>
+
+    </Grid>
+</Window>
