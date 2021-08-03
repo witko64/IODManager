@@ -1,0 +1,11 @@
+<connectionStrings>
+    <add name="AdventureWorks2012_DataEntities" connectionString="Data Source=(LocalDB)\MSSQLLocalDB;
+AttachDbFilename=|DataDirectory|\Common\Database\AdventureWorks2012_Data.mdf;Integrated Security=True" providerName="System.Data.EntityClient" />
+</connectionStrings>
+
+
+// Zczytujemy nasz 'connectionString' z pliku app.config
+// Je¿eli brakuje Wam klasy ConfigurationManger dodajcie referencjê do System.Configuration
+string connectionString = ConfigurationManager.ConnectionStrings["AdventureWorks2012_DataEntities"].ConnectionString;
+// Ustalamy po³¹czenie z baz¹ danych - nie jest ono jeszcze otwarte
+SqlConnection con = new SqlConnection(connectionString);

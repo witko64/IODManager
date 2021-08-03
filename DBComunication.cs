@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Data;
 using Microsoft.Data.SqlClient;
+using System.Configuration;
 
 namespace IODManager
 {
@@ -25,13 +26,13 @@ namespace IODManager
         
         private string GetConnectionString()
         {
-            string connectionString = "Server = " + host +
-                  "; Database = " + dbName +
-                  "; User Id = " + login +
-                  "; Password = " + paswsword + ";";
+//           string connectionString = "Server = " + host +
+//                 "; Database = " + dbName +
+//                  "; User Id = " + login +
+//                  "; Password = " + paswsword + ";";
+// niżej wersja  z plikiem konfiguracyjnym, działa :)
+            string connectionString = ConfigurationManager.ConnectionStrings["IODManager"].ConnectionString;
             return connectionString;
         }
     }
-
-
 }
